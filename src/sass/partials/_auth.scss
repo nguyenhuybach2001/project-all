@@ -1,0 +1,363 @@
+/*---------- auth css ----------*/
+.bg-user-full{
+  background-color: $color-bg5;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.c-auth-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  min-height: 100vh;
+}
+.c-auth-box{
+  border: 5px solid $color-black;
+  background: $color-white;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  @include border-radius(20px);
+  &__close{
+    position: absolute;
+    z-index: 3;
+    top: -12px;
+    right: -12px;
+    cursor: pointer;
+  }
+  &__left{
+    padding: 5px 5px 0;
+  }
+  &__right{
+    display: none;
+    margin-top: 10px;
+    @include border-radius(10px);
+  }
+  &__info{
+    padding: 15px;
+    color: $color-white;
+    line-height: 1.4;
+    h1{
+      margin: 0 0 5px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    p{
+      margin: 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+  &__copyright{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 15px;
+  }
+  &__logo{
+    margin-bottom: 25px;
+    img{
+      width: auto;
+      height: 30px;
+      max-width: 100%;
+    }
+  }
+  &__img{
+    text-align: center;
+    img{
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin-bottom: -10px;
+    }
+  }
+  &__otp{
+    padding-bottom: 5px;
+    h6{
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .icon32-key{
+      margin-bottom: 10px;
+    }
+    p{
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 500;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.c-flag{
+  width: 32px;
+  height: 32px;
+  @include border-radius(5px);
+  &.is-circle{
+    @include border-radius(100%);
+  }
+}
+.input-group{
+  &.is-flag{
+    @include shadow-container;
+    .input-group-prepend{
+      position: relative;
+      &:after{
+        //content: "";
+        //position: absolute;
+        //width: 1px;
+        //background: $color-border;
+        //top: 10px;
+        //bottom: 10px;
+        //right: 0;
+        //z-index: 2;
+      }
+      .btn{
+        border-right: none;
+        &.dropdown-toggle{
+          &:after{
+            display: none;
+            //background-image: url("../images/icons/icon12-down.svg");
+            //background-position: center center;
+            //background-repeat: no-repeat;
+            //width: 12px;
+            //height: 12px;
+            //border: none;
+          }
+        }
+      }
+    }
+    .form-control{
+      @include box-shadow(none);
+    }
+    .btn{
+      @include box-shadow(none);
+      &.btn-light{
+        background-color: $color-white;
+        border-color: $color-border2;
+      }
+      .btn-text{
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+      }
+      .c-flag{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      .small{
+        display: block;
+        font-size: 9px;
+        font-weight: 500;
+        color: $color-border4;
+        max-width: 85px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .dropdown-menu{
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .dropdown-item{
+      padding: 3px 15px;
+      .c-flag{
+        margin-right: 5px;
+      }
+    }
+    &.disabled{
+      .form-control{
+        background-color: $color-border;
+      }
+      .btn{
+        &.btn-light{
+          background-color: $color-border;
+        }
+      }
+    }
+  }
+}
+.c-auth-form{
+  .form-group{
+    margin-bottom: 10px;
+    position: relative;
+    &.form-group-icons{
+      display: block;
+    }
+    &.is-button{
+      padding-top: 10px;
+    }
+    &.is-padding{
+      padding-top: 10px;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+      font-weight: 700;
+      &.is-small{
+        font-size: 12px;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  .form-control{
+    height: 52px;
+    font-size: 12px;
+    font-weight: 700;
+    @include border-radius(5px);
+    @include shadow-container;
+    @include placeholdercolor($color-border4);
+  }
+  .btn{
+    font-weight: 700;
+    @include shadow-button;
+    &.btn-block{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .btn-lg{
+    padding: 0.4rem 1rem;
+    min-height: 50px;
+    span{
+      text-align: left;
+    }
+  }
+  .has-error{
+    .form-control{
+      border-color: $color-danger;
+    }
+    .input-group{
+      .btn{
+        border-color: $color-danger;
+      }
+      .form-control{
+        border-color: $color-danger;
+      }
+    }
+    .c-filter{
+      .c-filter-control{
+        border-color: $color-danger;
+      }
+    }
+    .invalid-feedback{
+      display: block;
+    }
+  }
+}
+.c-otp-number{
+  p{
+    font-weight: 500;
+    &.small{
+      font-size: 12px;
+    }
+  }
+  ul{
+    list-style: none;
+    margin: 0 -3px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    li{
+      width: percentage(1/6);
+      padding-left: 3px;
+      padding-right: 3px;
+      .form-control{
+        text-align: center;
+      }
+    }
+  }
+}
+//auth responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-auth-center{
+    padding: 20px;
+  }
+  .c-auth-box{
+    &__info{
+      padding: 20px;
+      h1{
+        font-size: 22px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    &__logo{
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-auth-box{
+    width: 810px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    &__left{
+      width: percentage(1/2);
+      min-height: 668px;
+      position: relative;
+      z-index: 1;
+      padding: 20px 20px 40px;
+    }
+    &__right{
+      margin-top: 0;
+      width: percentage(1/2);
+      min-height: 668px;
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+    &__info{
+      padding: 25px;
+      h1{
+        font-size: 24px;
+      }
+    }
+    &__copyright{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &__logo{
+      margin-bottom: 40px;
+    }
+    &__img{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: -25px;
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end auth responsive css
+/*---------- end auth css ----------*/

@@ -1,0 +1,112 @@
+/*---------- profile css ----------*/
+.c-info-box{
+  margin-bottom: 40px;
+  padding: 10px;
+  @include box-shadow(0px 0px 15px rgba($color-black, 0.1));
+  @include border-radius(10px);
+  &__title{
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  .b-grid{
+    .b-grid__img{
+      figure{
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        @include border-radius(50%);
+      }
+    }
+    .b-grid__title{
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    a.b-grid__edit{
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+  .b-form{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    .form-control{
+      font-size: 14px;
+      &.is-circle{
+        @include border-radius(18px);
+      }
+    }
+    .btn{
+      min-width: 120px;
+      font-weight: 700;
+    }
+    .btn-primary{
+      @include box-shadow(0px 4px 0px #48AC92, 0px 10px 30px rgba(0, 0, 0, 0.18));
+    }
+  }
+}
+.c-upload-image{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  figure{
+    width: 50px;
+    height: 50px;
+    border: 1px solid $color-border;
+    overflow: hidden;
+    margin: 0;
+    @include border-radius(50%);
+    img{
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+    }
+  }
+  &__input{
+    width: calc(100% - 50px);
+    padding-left: 15px;
+  }
+}
+//profile responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-info-box{
+    margin-bottom: 50px;
+    padding: 15px;
+    &__title{
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-info-box{
+    margin-bottom: 60px;
+    &__title{
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-info-box{
+    &__title{
+      font-size: 28px;
+    }
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+  .c-info-box{
+    &__title{
+      font-size: 32px;
+    }
+  }
+}
+//end profile responsive css
+/*---------- end profile css ----------*/

@@ -1,0 +1,170 @@
+/*---------- challenging base css ----------*/
+@keyframes move-top{
+  0%{
+    @include transform(translate(0, 0));
+  }
+  50%{
+    @include transform(translate(0, 10px));
+  }
+  100%{
+    @include transform(translate(0, 0));
+  }
+}
+@-webkit-keyframes move-top{
+  0%{
+    @include transform(translate(0, 0));
+  }
+  50%{
+    @include transform(translate(0, 10px));
+  }
+  100%{
+    @include transform(translate(0, 0));
+  }
+}
+.c-challenging-bg{
+  min-height: 650px;
+  background-color: $color-blue-dark;
+}
+.c-challenging-box{
+  min-height: 650px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-white;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-white,0.5);
+  }
+  &__off{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 15px 15px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__title{
+    padding-top: 110px;
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 538px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url("../images/challenging-top.png");
+    img{
+      max-width: 100%;
+    }
+  }
+  &__content{
+    padding-top: 320px;
+  }
+}
+.c-challenging-map{
+  position: relative;
+  z-index: 1;
+  >img{
+    width: 100%;
+    height: auto;
+  }
+  .c-kitten{
+    display: none;
+  }
+  .c-place{
+    display: none;
+  }
+}
+.c-kitten{
+  position: absolute;
+  z-index: 2;
+  width: 140px;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+.c-place{
+  position: absolute;
+  z-index: 3;
+  a.c-place__link{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+  }
+  &__cloud{
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    position: absolute;
+    z-index: 2;
+  }
+  &__img{
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__other{
+    display: none;
+  }
+}
+//challenging base responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-challenging-box{
+    &__title{
+      padding-top: percentage(110/1400);
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-challenging-box{
+    &:before{
+      display: none;
+    }
+    &__off{
+      display: none;
+    }
+  }
+  .c-challenging-map{
+    .c-kitten{
+      display: block;
+    }
+    .c-place{
+      display: block;
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end challenging base responsive css
+/*---------- end challenging base css ----------*/

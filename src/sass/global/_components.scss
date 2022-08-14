@@ -1,0 +1,351 @@
+/*---------- components css ----------*/
+/*banner*/
+//.c-banner{
+//  max-width: 100%;
+//  margin-left: auto;
+//  margin-right: auto;
+//  .c-banner-item{
+//    &:last-child{
+//      margin-bottom: 0;
+//    }
+//  }
+//}
+//.c-banner-item{
+//  margin-bottom: 1px;
+//  img{
+//    width:100%;
+//    height: auto;
+//  }
+//}
+/*end banner*/
+/*box*/
+.c-block{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  &.is-inner-padding{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &.is-border-radius{
+    @include border-radius(16px);
+  }
+}
+.c-block-overflow{
+  overflow: hidden;
+  .c-block{
+    overflow: visible;
+  }
+}
+.c-box{
+  margin-bottom: 60px;
+  &.is-margin-medium{
+    margin-bottom: 40px;
+  }
+  &.is-margin-small{
+    margin-bottom: 30px;
+  }
+  &:last-child{
+    margin-bottom: 0 !important;
+  }
+  .c-box__title{
+    padding-bottom: 25px;
+    .c-box__title__name{
+      display: inline-block;
+      vertical-align: top;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 0;
+      margin-top: 0;
+      .is-small{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      b.is-small{
+        font-weight: 700;
+      }
+      .is-medium{
+        font-size: 75%;
+      }
+      [class*="icon"]{
+        margin-left: 7px;
+      }
+    }
+    .c-box__title__desc{
+      margin-top: 10px;
+      line-height: 1.4;
+      max-width: 615px;
+      font-weight: 500;
+      p{
+        margin: 0;
+        &.is-small{
+          font-size: 12px;
+        }
+      }
+      img{
+        max-width: 100%;
+      }
+      h6{
+        font-size: 14px;
+      }
+      h5{
+        font-size: 15px;
+      }
+      h4{
+        font-size: 16px;
+      }
+      h3{
+        font-size: 18px;
+      }
+      h2{
+        font-size: 20px;
+      }
+      h1{
+        font-size: 22px;
+      }
+    }
+    .c-box__title__btn{
+      padding-top: 20px;
+      .btn-primary{
+        @include box-shadow(0px 4px 0px #48AC92, 0px 10px 30px rgba(0, 0, 0, 0.18));
+        &:hover{
+          @include box-shadow(0px 4px 0px $color-danger, 0px 10px 30px rgba(0, 0, 0, 0.18));
+        }
+      }
+    }
+  }
+  &.is-center{
+    .c-box__title{
+      text-align: center;
+    }
+    .c-box__title__desc{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+/*end box*/
+.c-more-right{
+  text-align: right;
+  padding-top: 10px;
+  a{
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+.c-more{
+  padding-top: 10px;
+  text-align: center;
+  a{
+    display: inline-block;
+    text-decoration: none;
+    color: $color-text;
+    padding: 10px 25px;
+    border: 1px solid $color-border;
+    font-weight: 700;
+    @include border-radius(20px);
+    @include box-shadow(0px 0px 15px rgba($color-black, 0.1));
+    [class*="icon"]{
+      margin-left: 5px;
+    }
+  }
+}
+.c-back{
+  a{
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    [class*="icon"]{
+      margin-right: 5px;
+    }
+  }
+}
+//components responsive css
+@media (min-width: $screen-sm-min){
+
+}
+@media (min-width: $screen-md-min){
+  .c-block{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &.is-inner-padding{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .c-box{
+    margin-bottom: 80px;
+    &.is-margin-medium{
+      margin-bottom: 55px;
+    }
+    &.is-margin-small{
+      margin-bottom: 40px;
+    }
+    .c-box__title{
+      padding-bottom: 30px;
+      .c-box__title__name{
+        font-size: 36px;
+        .is-small{
+          font-size: 20px;
+        }
+      }
+      .c-box__title__desc{
+        font-size: 16px;
+        p{
+          font-size: 16px;
+        }
+        h6{
+          font-size: 16px;
+        }
+        h5{
+          font-size: 17px;
+        }
+        h4{
+          font-size: 18px;
+        }
+        h3{
+          font-size: 20px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        h1{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){
+  .c-block{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .c-box{
+    margin-bottom: 100px;
+    &.is-margin-medium{
+      margin-bottom: 70px;
+    }
+    &.is-margin-small{
+      margin-bottom: 50px;
+    }
+    .c-box__title{
+      padding-bottom: 35px;
+      .c-box__title__name{
+        font-size: 44px;
+        .is-small{
+          font-size: 24px;
+        }
+      }
+      .c-box__title__btn{
+        padding-top: 40px;
+        .btn{
+          padding:0.9rem 2rem;
+          min-width: 260px;
+          font-size: 22px;
+          &.is-circle{
+            @include border-radius(32px);
+          }
+        }
+        .btn-lg{
+          min-width: 420px;
+        }
+      }
+      &.is-button{
+        position: relative;
+        z-index: 1;
+        padding-right: 420px;
+        .c-box__title__btn{
+          position: absolute;
+          z-index: 2;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+  .c-more-right{
+    a{
+      font-size: 16px;
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-orange;
+      }
+    }
+  }
+  .c-more{
+    a{
+      font-size: 16px;
+    }
+  }
+  .c-back{
+    a{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-orange;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){
+  .c-block{
+    padding-top: 125px;
+    padding-bottom: 125px;
+    &.is-inner-padding{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &.is-border-radius{
+      @include border-radius(20px);
+    }
+  }
+  .c-box{
+    margin-bottom: 125px;
+    &.is-margin-medium{
+      margin-bottom: 85px;
+    }
+    &.is-margin-small{
+      margin-bottom: 60px;
+    }
+    .c-box__title{
+      padding-bottom: 40px;
+      .c-box__title__name{
+        font-size: 52px;
+        .is-small{
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xxl-min){
+  .c-block{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    &.is-inner-padding{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  .c-box{
+    margin-bottom: 150px;
+    &.is-margin-medium{
+      margin-bottom: 105px;
+    }
+    &.is-margin-small{
+      margin-bottom: 75px;
+    }
+    .c-box__title{
+      .c-box__title__name{
+        font-size: 60px;
+        .is-small{
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+//end components responsive css
+/*---------- end components css ----------*/

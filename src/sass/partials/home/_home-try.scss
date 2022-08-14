@@ -1,0 +1,117 @@
+/*---------- home try css ----------*/
+.c-try-block{
+  .c-box{
+    .c-box__title{
+      .c-box__title__desc{
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          li{
+            padding-left: 28px;
+            position: relative;
+            z-index: 1;
+            width: percentage(1/2);
+            margin-bottom: 15px;
+            font-weight: 700;
+            &:before{
+              content: "";
+              position: absolute;
+              z-index: 2;
+              top: 0;
+              left: 0;
+              background-image: url("../images/about-li.png");
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 25px;
+              height: 25px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+            &:nth-child(2n+1){
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .c-box__content{
+      .b-maincontent{
+        text-align: center;
+      }
+    }
+  }
+}
+//home try responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-try-block{
+    .c-box{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .c-box__title{
+        width: percentage(1/2);
+        padding-right: 15px;
+      }
+      .c-box__content{
+        width: percentage(1/2);
+        padding-left: 15px;
+        .b-maincontent{
+          text-align: right;
+        }
+      }
+      &:nth-child(2n+1){
+        flex-direction: row-reverse;
+        .c-box__title{
+          padding-right: 0;
+          padding-left: 15px;
+        }
+        .c-box__content{
+          padding-left: 0;
+          padding-right: 15px;
+          .b-maincontent{
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-try-block{
+    .c-box{
+      .c-box__title{
+        padding-right: 20px;
+      }
+      .c-box__content{
+        padding-left: 20px;
+      }
+      &:nth-child(2n+1){
+        .c-box__title{
+          padding-right: 0;
+          padding-left: 20px;
+        }
+        .c-box__content{
+          padding-left: 0;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end home try responsive css
+/*---------- end home try css ----------*/

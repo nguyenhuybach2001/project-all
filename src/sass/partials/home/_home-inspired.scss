@@ -1,0 +1,75 @@
+/*---------- home inspired css ----------*/
+.c-inspired-block{
+  background-color: $color-primary-light-max;
+  background-image: url("../images/inspired-circle.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 75% auto;
+  padding-top: 90px;
+  padding-bottom: 150px;
+}
+.c-inspired{
+  &__content{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+//home inspired responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-inspired-block{
+    background-size: auto;
+    padding-top: 140px;
+    padding-bottom: 200px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-inspired-block{
+    padding-top: 170px;
+    padding-bottom: 230px;
+  }
+  .c-inspired{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    &__content{
+      margin-bottom: 0;
+    }
+    &__img{
+      text-align: left;
+      img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin-left: -15px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-inspired-block{
+    padding-top: 200px;
+    padding-bottom: 260px;
+  }
+  .c-inspired{
+    &__img{
+      img{
+        margin-left: -30px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end home inspired responsive css
+/*---------- end home inspired css ----------*/

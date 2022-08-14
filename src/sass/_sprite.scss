@@ -1,0 +1,128 @@
+/*---------- sprite css ----------*/
+[class*="icon"]{
+  display:inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+[class*="icon12"]{
+  width:12px;
+  height:12px;
+}
+[class*="icon16"]{
+	width:16px;
+	height:16px;
+}
+[class*="icon20"]{
+  width:20px;
+  height:20px;
+}
+[class*="icon24"]{
+	width:24px;
+	height:24px;
+}
+[class*="icon32"]{
+	width:32px;
+	height:32px;
+}
+[class*="icon36"]{
+  width:36px;
+  height:36px;
+}
+[class*="icon48"]{
+  width:48px;
+  height:48px;
+}
+[class*="icon64"]{
+  width:64px;
+  height:64px;
+}
+[class*="icon128"]{
+  width:128px;
+  height:128px;
+}
+.icon16-facebook-white{
+  background-image: url("../images/icons/icon16-facebook-white.svg");
+}
+.icon16-heart-red{
+  background-image: url("../images/icons/icon16-heart-red.svg");
+}
+.icon16-eye-black{
+  background-image: url("../images/icons/icon16-eye-black.svg");
+}
+.icon16-clock{
+  background-image: url("../images/icons/icon16-clock.png");
+}
+.icon20-email-white{
+  background-image: url("../images/icons/icon20-email-white.svg");
+}
+.icon20-phone-white{
+  background-image: url("../images/icons/icon20-phone-white.svg");
+}
+.icon24-search-black{
+  background-image: url("../images/icons/icon24-search-black.svg");
+}
+.icon24-sort-down-black{
+  background-image: url("../images/icons/icon24-sort-down-black.svg");
+}
+.icon24-setting{
+  background-image: url("../images/icons/icon24-setting.svg");
+}
+.icon24-log-out-white{
+  background-image: url("../images/icons/icon24-log-out-white.svg");
+}
+.icon24-caret-down{
+  background-image: url("../images/icons/icon24-caret-down.png");
+}
+.icon24-arrow-right-blue{
+  background-image: url("../images/icons/icon24-arrow-right-blue.png");
+}
+.icon24-school{
+  background-image: url("../images/icons/icon24-school.png");
+}
+.icon24-pin{
+  background-image: url("../images/icons/icon24-pin.png");
+}
+.icon32-heart-red{
+  background-image: url("../images/icons/icon32-heart-red.svg");
+}
+.icon32-code-black{
+  background-image: url("../images/icons/icon32-code-black.svg");
+}
+.icon32-youtube{
+  background-image: url("../images/icons/icon32-youtube.svg");
+}
+.icon32-key{
+  background-image: url("../images/icons/icon32-key.svg");
+}
+.icon32-close{
+  background-image: url("../images/icons/icon32-close.svg");
+}
+.icon32-user{
+  background-image: url("../images/icons/icon32-user.png");
+}
+.icon32-project{
+  background-image: url("../images/icons/icon32-project.png");
+}
+.icon32-arrow-left{
+  background-image: url("../images/icons/icon32-arrow-left.png");
+}
+.icon36-facebook-white{
+  background-image: url("../images/icons/icon36-facebook-white.svg");
+}
+.icon36-arrow-long-right-white{
+  background-image: url("../images/icons/icon36-arrow-long-right-white.svg");
+}
+.icon64-play{
+  background-image: url("../images/icons/icon64-play.svg");
+}
+.icon64-contest{
+  background-image: url("../images/icons/icon64-contest.png");
+}
+.icon94-play{
+  background-image: url("../images/icons/icon94-play.png");
+}
+.icon128-play-square{
+  background-image: url("../images/icons/icon128-play-square.svg");
+}
+/*---------- end sprite css ----------*/

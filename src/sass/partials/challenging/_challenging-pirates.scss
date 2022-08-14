@@ -1,0 +1,188 @@
+/*---------- challenging pirates css ----------*/
+.bg-pirates{
+  background-color: #69D4E2;
+}
+.c-challenging-pirates{
+  padding-bottom: 80px;
+  .c-kitten{
+    width: percentage(71/1400);
+    left: percentage(330/1400);
+    top: percentage(294/1400);
+    &.active-1{
+      left: percentage(330/1400);
+      top: percentage(294/1400);
+    }
+    &.active-2{
+      left: percentage(640/1400);
+      top: percentage(490/1400);
+    }
+    &.active-3{
+      left: percentage(630/1400);
+      top: percentage(765/1400);
+    }
+    &.active-4{
+      left: percentage(984/1400);
+      top: percentage(650/1400);
+    }
+    &.active-5{
+      left: percentage(1037/1400);
+      top: percentage(334/1400);
+    }
+  }
+  .c-place{
+    &__cloud{
+      background-image: url("../upload/challenging/pirates/pirates-cloud_1.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 185px;
+      height: 145px;
+      left: -30px;
+      top: -126px;
+      color: $color-white;
+      text-align: center;
+      padding: 30px 20px 0 40px;
+      @include opacity(0);
+      @include transition-all(0.2s);
+      .is-medium{
+        font-size: 18px;
+      }
+    }
+    &__other{
+      display: flex;
+      align-items: center;
+      padding-left: 37px;
+      margin-top: -10px;
+    }
+    &__number{
+      width: 27px;
+      height: 27px;
+      background-color: $color-black;
+      border: 2px solid $color-white;
+      text-align: center;
+      line-height: 25px;
+      font-weight: 700;
+      color: $color-white;
+      font-size: 14px;
+      @include border-radius(50%);
+      @include box-shadow(0px 0px 20px rgba($color-black, 0.6));
+    }
+    &__do{
+      height: 27px;
+      background-color: $color-black;
+      border: 2px solid $color-white;
+      text-align: center;
+      line-height: 25px;
+      font-weight: 700;
+      color: $color-white;
+      font-size: 14px;
+      padding: 0 15px;
+      white-space: nowrap;
+      margin-left: 2px;
+      @include border-radius(14px);
+      @include box-shadow(0px 0px 20px rgba($color-black, 0.6));
+      @include opacity(0);
+      @include transition-all(0.2s);
+    }
+    &.active, &:hover{
+      .c-place__img{
+        -webkit-animation-name: move-top;
+        animation-name: move-top;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+      .c-place__cloud{
+        @include opacity(1);
+      }
+      .c-place__do{
+        @include opacity(1);
+      }
+    }
+    &.is-pos-1{
+      left: percentage(390/1400);
+      top: percentage(233/1400);
+      .c-place__cloud{
+        background-image: url("../upload/challenging/pirates/pirates-cloud_1.png");
+      }
+      .c-place__number{
+        background-color: #F25130;
+      }
+      .c-place__do{
+        background-color: #F25130;
+      }
+    }
+    &.is-pos-2{
+      left: percentage(690/1400);
+      top: percentage(423/1400);
+      .c-place__cloud{
+        background-image: url("../upload/challenging/pirates/pirates-cloud_2.png");
+      }
+      .c-place__number{
+        background-color: #3AAE4D;
+      }
+      .c-place__do{
+        background-color: #3AAE4D;
+      }
+    }
+    &.is-pos-3{
+      left: percentage(680/1400);
+      top: percentage(695/1400);
+      .c-place__cloud{
+        background-image: url("../upload/challenging/pirates/pirates-cloud_3.png");
+      }
+      .c-place__number{
+        background-color: #3095C1;
+      }
+      .c-place__do{
+        background-color: #3095C1;
+      }
+    }
+    &.is-pos-4{
+      left: percentage(1035/1400);
+      top: percentage(585/1400);
+      .c-place__cloud{
+        background-image: url("../upload/challenging/pirates/pirates-cloud_4.png");
+      }
+      .c-place__number{
+        background-color: #FFC33E;
+      }
+      .c-place__do{
+        background-color: #FFC33E;
+      }
+    }
+    &.is-pos-5{
+      left: percentage(1100/1400);
+      top: percentage(268/1400);
+      .c-place__cloud{
+        background-image: url("../upload/challenging/pirates/pirates-cloud_5.png");
+      }
+      .c-place__number{
+        background-color: #4200FF;
+      }
+      .c-place__do{
+        background-color: #4200FF;
+      }
+    }
+  }
+}
+//challenging pirates responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end challenging pirates responsive css
+/*---------- end challenging pirates css ----------*/

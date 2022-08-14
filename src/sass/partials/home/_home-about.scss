@@ -1,0 +1,82 @@
+/*---------- home about css ----------*/
+.c-about{
+  &__content{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  .c-box{
+    .c-box__title{
+      .c-box__title__name{
+        color: $color-white;
+      }
+    }
+  }
+  .b-maincontent{
+    color: $color-white;
+    font-weight: 500;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        margin-bottom: 15px;
+        padding-left: 32px;
+        position: relative;
+        z-index: 1;
+        &:before{
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          background-image: url("../images/about-li.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+//home about responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__content{
+      margin-bottom: 0;
+      width: percentage(520/1070);
+    }
+    &__img{
+      width: percentage(500/1070);
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end home about responsive css
+/*---------- end home about css ----------*/

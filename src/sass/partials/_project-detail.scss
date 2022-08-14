@@ -1,0 +1,255 @@
+/*---------- project detail css ----------*/
+.c-project-view{
+  background-color: $color-bg3;
+  @include border-radius(10px 10px 20px 20px);
+  margin-bottom: 20px;
+  &__bar{
+    padding: 10px 15px 15px;
+  }
+  &__head{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__avatar{
+    width: 50px;
+    height: 50px;
+    border: 3px solid $color-white;
+    overflow: hidden;
+    @include border-radius(50%);
+    img{
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__text{
+    width: calc(100% - 60px);
+    line-height: 1.2;
+  }
+  &__title{
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__author{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+    b{
+      text-decoration: underline;
+    }
+  }
+  &__btn{
+    .btn{
+      font-weight: 700;
+      min-width: 182px;
+      &.btn-lg{
+        font-size: 22px;
+        @include border-radius(25px);
+      }
+      &.btn-primary{
+        @include box-shadow(0px 4px 0px #48AC92, 0px 10px 30px rgba(0, 0, 0, 0.18));
+        &:hover{
+          @include box-shadow(0px 4px 0px $color-danger, 0px 10px 30px rgba(0, 0, 0, 0.18));
+        }
+      }
+    }
+  }
+}
+.c-project-play{
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-top: percentage(570/770);
+  @include border-radius(10px);
+  &.is-full{
+    z-index: 9999;
+  }
+  &__thumb{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    a{
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &:before{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color-black,0.6);
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        left: 50%;
+        width: 64px;
+        height: 64px;
+        margin-top: -32px;
+        margin-left: -32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("../images/icons/icon128-play-square.svg");
+      }
+    }
+  }
+  &__iframe{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    iframe{
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.c-project-border{
+  border: 1px solid $color-border;
+  padding: 15px;
+  margin-bottom: 25px;
+  @include border-radius(10px);
+  .b-maincontent{
+    font-weight: 500;
+    text-align: justify;
+    p{
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.c-project-label{
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.c-project-tags{
+  a{
+    text-decoration: none;
+    color: $color-black;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    line-height: 1.3;
+    margin: 0 3px 5px 0;
+    background-color: $color-bg4;
+    @include border-radius(4px);
+  }
+}
+//project detail responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-project-detail{
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .c-project-view{
+    margin-bottom: 25px;
+    &__bar{
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+    &__head{
+      margin-bottom: 0;
+      width: calc(100% - 182px);
+      padding-right: 10px;
+    }
+    &__btn{
+      text-align: right;
+      width: 182px;
+    }
+    &__title{
+      font-size: 18px;
+    }
+  }
+  .c-project-border{
+    padding: 20px;
+    margin-bottom: 30px;
+    @include border-radius(20px);
+    .b-maincontent{
+      font-size: 16px;
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+  .c-project-label{
+    font-size: 18px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-project-view{
+    margin-bottom: 30px;
+  }
+  .c-project-play{
+    &__thumb{
+      a{
+        &:after{
+          width: 128px;
+          height: 128px;
+          margin-top: -64px;
+          margin-left: -64px;
+        }
+      }
+    }
+  }
+  .c-project-border{
+    margin-bottom: 35px;
+  }
+  .c-project-tags{
+    a{
+      @include transition-all(0.2s);
+      &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-project-view{
+    margin-bottom: 35px;
+  }
+  .c-project-border{
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end project detail responsive css
+/*---------- end project detail css ----------*/

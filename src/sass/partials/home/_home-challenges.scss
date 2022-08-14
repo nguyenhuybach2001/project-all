@@ -1,0 +1,53 @@
+/*---------- home challenges css ----------*/
+.c-challenges{
+  &__content{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+//home challenges responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-challenges-block{
+    padding-top: 150px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-challenges-block{
+    padding-top: 225px;
+  }
+  .c-challenges{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    &__content{
+      margin-bottom: 0;
+      width: percentage(520/1170);
+    }
+    &__img{
+      width: percentage(580/1170);
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-challenges-block{
+    padding-top: 300px;
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+  .c-challenges-block{
+    padding-top: 350px;
+  }
+}
+//end home challenges responsive css
+/*---------- end home challenges css ----------*/

@@ -1,0 +1,166 @@
+/*---------- menu css ----------*/
+.c-dropdown-menu{
+  display: none;
+  background: $color-white;
+  width: 200px;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  padding: 5px 0;
+  @include border-radius(6px);
+  @include box-shadow(0 5px 10px rgba($color-black,0.15));
+  &.is-right{
+    left: auto;
+    right: 0;
+  }
+  &.is-center{
+    left: 50%;
+    right: auto;
+    margin-left: -100px;
+  }
+  >ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    >li{
+      >a{
+        display: block;
+        text-align: left;
+        color: $color-black;
+        font-size: 14px;
+        padding: 7px 15px;
+        font-weight: 500;
+        text-decoration: none;
+        .icon-left{
+          margin-right: 10px;
+        }
+        .c-flag{
+          margin-right: 5px;
+        }
+      }
+      &.is-log-out{
+        >a{
+          background: $color-border4 !important;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &__top{
+    margin-top: -5px;
+    padding: 10px 15px 5px;
+    text-align: center;
+    font-weight: 500;
+    background-color: $color-border;
+    @include border-radius(6px 6px 0 0);
+  }
+  &__more{
+    margin-bottom: -5px;
+    padding: 8px 10px;
+    text-align: right;
+    background-color: $color-border;
+    @include border-radius(0 0 6px 6px);
+    a{
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+}
+.js-dropdown-hover{
+  &:hover{
+    .c-dropdown-menu{
+      display: block;
+    }
+  }
+}
+.c-menu{
+  padding: 10px 0;
+  >ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    >li{
+      >a{
+        text-decoration: none;
+        display: block;
+        color: $color-white;
+        padding: 10px 15px;
+        font-weight: 500;
+      }
+      &.is-active, &.active{
+        >a{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+//menu responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-dropdown-menu{
+    >ul{
+      >li{
+        >a{
+          &:hover{
+            background: $color-bg2;
+            .text-gray-light{
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .c-menu{
+    padding: 0;
+    >ul{
+      >li{
+        float: left;
+        >a{
+          line-height: 60px;
+          padding: 0 15px;
+          height: 60px;
+          position: relative;
+          z-index: 1;
+          &:before{
+            content: "";
+            background-color: $color-primary;
+            height: 9px;
+            position: absolute;
+            z-index: -1;
+            bottom: 20px;
+            left: 10px;
+            right: 10px;
+            display: none;
+          }
+          &:hover{
+            &:before{
+              display: block;
+            }
+          }
+        }
+        &.is-active, &.active{
+          >a{
+            font-weight: 700;
+            &:before{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end menu responsive css
+/*---------- end menu css ----------*/

@@ -1,0 +1,299 @@
+/*---------- home pupil css ----------*/
+.c-pupil-block{
+  background-color: $color-green-dark;
+  background-image: url("../images/pupil-bg.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    background-image: url("../images/inspired-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background-image: url("../images/news-top.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .c-box{
+    position: relative;
+    z-index: 3;
+    .c-box__title{
+      .c-box__title__name{
+        color: $color-white;
+      }
+    }
+  }
+  &.is-foot-green{
+    &:after{
+      background-image: url("../images/footer-top.svg");
+    }
+  }
+}
+.c-pupil-box{
+  margin-left: -10px;
+  margin-right: -10px;
+  &__title{
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    .is-big{
+      font-size: percentage(32/22);
+    }
+  }
+  &__btn{
+    text-align: center;
+    padding-bottom: 30px;
+    .btn-primary {
+      @include box-shadow(0px 4px 0px #48AC92, 0px 10px 30px rgba(0, 0, 0, 0.18));
+      &:hover{
+        @include box-shadow(0px 4px 0px $color-danger, 0px 10px 30px rgba(0, 0, 0, 0.18));
+      }
+    }
+  }
+}
+.c-pupil-slider{
+  margin-bottom: 10px;
+  .owl-carousel{
+    .owl-item{
+      padding: 0 10px 20px;
+    }
+    .owl-nav{
+      .owl-prev, .owl-next{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        margin-top: -15px;
+        width: 30px;
+        height: 30px;
+        background-color: $color-gray-medium;
+        text-align: center;
+        line-height: 28px;
+        border: none;
+        padding: 0;
+        @include border-radius(4px);
+        background-position: center center;
+        background-repeat: no-repeat;
+        &:focus{
+          outline: none;
+        }
+      }
+      .owl-prev{
+        background-image: url("../images/icons/icon12-left-white.svg");
+        left: 0;
+      }
+      .owl-next{
+        background-image: url("../images/icons/icon12-right-white.svg");
+        right: 0;
+      }
+    }
+  }
+  .b-grid{
+    padding: 10px 10px 15px;
+    height: 100%;
+    background-color: $color-white;
+    @include border-radius(10px);
+    @include box-shadow(0px 10px 20px rgba(41, 41, 42, 0.07));
+    .b-grid__img{
+      float: none;
+      width: auto;
+      height: auto;
+      margin-bottom: 15px;
+      a{
+        display: block;
+        padding-top: percentage(132/207);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        @include border-radius(10px);
+      }
+      img{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+    .b-grid__content{
+      margin-left: 0;
+    }
+    .b-grid__row{
+      color: $color-text;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    .b-grid__title{
+      margin: 0;
+      font-weight: 700;
+      a{
+        color: $color-black;
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .b-grid__author{
+      color: $color-black;
+      font-weight: 700;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .b-grid__desc{
+      line-height: 16px;
+      height: 16px * 3;
+      overflow: hidden;
+    }
+  }
+}
+//home pupil responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-pupil-block{
+    background-size: auto;
+    padding-top: 130px;
+    padding-bottom: 0;
+  }
+  .c-pupil-slider{
+    margin-bottom: 20px;
+  }
+  .c-pupil-box{
+    &__title{
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-pupil-block{
+    padding-top: 150px;
+  }
+  .c-pupil-box{
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    z-index: 1;
+    background-image: url("../images/pupil-computer.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: percentage(689/1170);
+    &__inner{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-left: percentage(155/1170);
+      padding-right: percentage(155/1170);
+      padding-top: percentage(90/1170);
+    }
+    &__title{
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: $color-text;
+    }
+    &__btn{
+      .btn{
+        padding:0.9rem 2rem;
+        min-width: 260px;
+        font-size: 22px;
+        &.is-circle{
+          @include border-radius(32px);
+        }
+      }
+      .btn-lg{
+        min-width: 430px;
+      }
+    }
+  }
+  .c-pupil-slider{
+    margin-left: 50px;
+    margin-right: 50px;
+    .owl-carousel{
+      .owl-nav{
+        .owl-prev, .owl-next{
+          margin-top: -23px;
+          width: 45px;
+          height: 45px;
+          line-height: 44px;
+        }
+        .owl-prev{
+          left: -50px;
+        }
+        .owl-next{
+          right: -50px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-pupil-block{
+    padding-top: 170px;
+    &:before{
+      background-image: url("../images/inspired-bottom.png");
+      background-size: 100% 100%;
+    }
+    &:after{
+      background-image: url("../images/news-top.png");
+      background-size: 100% 100%;
+    }
+    &.is-foot-green{
+      &:after{
+        background-image: url("../images/footer-top.png");
+      }
+    }
+  }
+  .c-pupil-box{
+    &__title{
+      margin-bottom: 25px;
+    }
+  }
+  .c-pupil-slider{
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end home pupil responsive css
+/*---------- end home pupil css ----------*/

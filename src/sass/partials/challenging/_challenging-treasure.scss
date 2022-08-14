@@ -1,0 +1,84 @@
+/*---------- challenging treasure css ----------*/
+.bg-treasure{
+  background-color: #CA972F;
+}
+.c-challenging-treasure{
+  padding-bottom: 80px;
+  .c-kitten{
+    left: percentage(165/1400);
+    top: percentage(245/1400);
+    &.active-1{
+      left: percentage(600/1400);
+      top: percentage(420/1400);
+    }
+    &.active-2{
+      left: percentage(670/1400);
+      top: percentage(720/1400);
+    }
+    &.active-3{
+      left: percentage(140/1400);
+      top: percentage(700/1400);
+    }
+  }
+  .c-place{
+    &__cloud{
+      background-image: url("../upload/challenging/treasure/treasure-cloud.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 328px;
+      height: 217px;
+      padding: 50px 95px 75px 80px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: static;
+    }
+    &__img{
+      display: none;
+    }
+    &.active, &:hover{
+      .c-place__cloud{
+        -webkit-animation-name: move-top;
+        animation-name: move-top;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+    }
+    &.is-pos-1{
+      left: percentage(710/1400);
+      top: percentage(460/1400);
+    }
+    &.is-pos-2{
+      left: percentage(770/1400);
+      top: percentage(780/1400);
+    }
+    &.is-pos-3{
+      left: percentage(245/1400);
+      top: percentage(710/1400);
+    }
+  }
+}
+//challenging treasure responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+//end challenging treasure responsive css
+/*---------- end challenging treasure css ----------*/

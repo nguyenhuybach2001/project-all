@@ -1,0 +1,66 @@
+/*---------- layout css ----------*/
+.l-content{
+  padding-top: 25px;
+  padding-bottom: 90px;
+}
+.l-sidebar{
+  margin-bottom: 30px;
+}
+.l-main{
+
+}
+.bg-danger{
+  background-color: $color-danger !important;
+}
+.bg-primary{
+  background-color: $color-primary !important;
+}
+.bg-orange{
+  background-color: $color-orange;
+}
+.bg-orange-light{
+  background-color: $color-orange-light;
+}
+//layout responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .l-content{
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .l-content{
+    padding-top: 40px;
+    padding-bottom: 115px;
+  }
+  .l-content-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .l-sidebar{
+    margin-bottom: 0;
+    width: 300px;
+  }
+  .l-main{
+    width: calc(100% - 300px);
+    padding-left: 20px;
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .l-content{
+    padding-top: 50px;
+  }
+  .l-sidebar{
+    width: 336px;
+  }
+  .l-main{
+    width: calc(100% - 336px);
+  }
+}
+//layout responsive css
+/*---------- end layout css ----------*/
